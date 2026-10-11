@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.9", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Validate skill
+        run: python -I skills/dev-conductor/scripts/validate.py
+      - name: Script tests
+        run: python -I skills/dev-conductor/evals/test_scripts.py
+      - name: JSON manifests parse
+        run: python -c "import json; [json.load(open(p)) for p in ('.claude-plugin/plugin.json', '.claude-plugin/marketplace.json')]"
+      - name: Companion installer dry run
+        run: python install_companions.py --dry-run --all --include-installed
+
+  install-unix:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shellcheck
+        if: runner.os == 'Linux'
+        run: shellcheck install.sh
+      - name: Install into a temp HOME
+        run: |
+          export HOME="$RUNNER_TEMP/home" && mkdir -p "$HOME"
+          sh install.sh
+          test -f "$HOME/.claude/skills/dev-conductor/SKILL.md"
+          test -f "$HOME/.agents/skills/dev-conductor/SKILL.md"
+          sh install.sh | grep -q "skip:"
+
+  install-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install into a temp project
+        shell: pwsh
+        run: |
+          $p = Join-Path $env:RUNNER_TEMP "proj"; New-Item -ItemType Directory $p | Out-Null
+          ./install.ps1 -Project $p -AgentsMd
+          if (-not (Test-Path "$p\.claude\skills\dev-conductor\SKILL.md")) { throw "claude install missing" }
+          if (-not (Test-Path "$p\AGENTS.md")) { throw "AGENTS.md not copied" }

@@ -1,0 +1,12 @@
+{
+  "name": "dev-conductor",
+  "version": "1.0.0",
+  "description": "Sizes each coding task and routes every phase (clarify, spec, debug, implement, design, review, verify) to the right installed specialist skill, with built-in fallbacks.",
+  "author": {
+    "name": "RDTUTORIAL"
+  },
+  "homepage": "https://github.com/RDTUTORIAL/dev-conductor",
+  "repository": "https://github.com/RDTUTORIAL/dev-conductor",
+  "license": "MIT",
+  "keywords": ["skills", "workflow", "orchestration", "frontend", "backend", "database", "tdd", "code-review"]
+}

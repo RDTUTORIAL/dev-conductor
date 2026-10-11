@@ -1,0 +1,14 @@
+{
+  "name": "dev-conductor",
+  "owner": {
+    "name": "RDTUTORIAL"
+  },
+  "plugins": [
+    {
+      "name": "dev-conductor",
+      "source": "./",
+      "description": "Sizes each coding task and routes every phase to the right installed specialist skill, with built-in fallbacks.",
+      "version": "1.0.0"
+    }
+  ]
+}

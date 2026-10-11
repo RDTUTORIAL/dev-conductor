@@ -1,0 +1,215 @@
+{
+  "$comment": "Companion skills dev-conductor routes to. Installed by install_companions.py via the `skills` CLI (npx skills). Third-party skills are instructions your agent will follow: review sources before installing.",
+  "version": 1,
+  "packs": {
+    "core": {
+      "description": "Process skills: clarify, plan, debug, TDD, review, verify",
+      "sources": {
+        "obra/superpowers": [
+          "brainstorming",
+          "writing-plans",
+          "executing-plans",
+          "systematic-debugging",
+          "test-driven-development",
+          "requesting-code-review",
+          "verification-before-completion",
+          "subagent-driven-development",
+          "finishing-a-development-branch"
+        ],
+        "mattpocock/skills": [
+          "grill-me",
+          "grill-with-docs",
+          "grilling",
+          "diagnosing-bugs",
+          "tdd",
+          "code-review",
+          "domain-modeling",
+          "codebase-design",
+          "improve-codebase-architecture",
+          "to-spec",
+          "to-tickets",
+          "implement",
+          "prototype",
+          "wayfinder"
+        ],
+        "sickn33/antigravity-awesome-skills": [
+          "ask-questions-if-underspecified",
+          "architecture-decision-records",
+          "cc-skill-security-review",
+          "security-auditor",
+          "commit",
+          "create-pr"
+        ]
+      }
+    },
+    "frontend": {
+      "description": "Design direction, components, accessibility, motion, anti-slop, visual testing",
+      "sources": {
+        "nextlevelbuilder/ui-ux-pro-max-skill": [
+          "ui-ux-pro-max"
+        ],
+        "pbakaus/impeccable": [
+          "impeccable"
+        ],
+        "Leonxlnx/taste-skill": [
+          "design-taste-frontend",
+          "high-end-visual-design",
+          "minimalist-ui",
+          "industrial-brutalist-ui",
+          "gpt-taste",
+          "redesign-existing-projects",
+          "stitch-design-taste"
+        ],
+        "miqdadbadjuber/anti-slop": [
+          "antislop-ui",
+          "antislop-copywriting",
+          "antislop-human",
+          "antislop-layoutmobile"
+        ],
+        "anthropics/skills": [
+          "frontend-design",
+          "webapp-testing"
+        ],
+        "sickn33/antigravity-awesome-skills": [
+          "design-md",
+          "baseline-ui",
+          "shadcn",
+          "tailwind-design-system",
+          "tailwind-patterns",
+          "fixing-accessibility",
+          "ui-a11y",
+          "wcag-audit-patterns",
+          "fixing-motion-performance",
+          "copywriting",
+          "ux-copy",
+          "unslop",
+          "playwright-skill",
+          "claude-d3js-skill",
+          "plotly"
+        ]
+      }
+    },
+    "backend": {
+      "description": "API design, services, databases, migrations, auth, payments, infra, LLM apps",
+      "sources": {
+        "anthropics/skills": [
+          "claude-api"
+        ],
+        "sickn33/antigravity-awesome-skills": [
+          "api-design-principles",
+          "api-patterns",
+          "graphql-architect",
+          "backend-dev-guidelines",
+          "nodejs-backend-patterns",
+          "cc-skill-backend-patterns",
+          "database-design",
+          "postgres-best-practices",
+          "postgresql",
+          "database-migration",
+          "database-migrations-sql-migrations",
+          "sql-optimization-patterns",
+          "postgresql-optimization",
+          "database-optimizer",
+          "auth-implementation-patterns",
+          "stripe-integration",
+          "payment-integration",
+          "error-handling-patterns",
+          "docker-expert",
+          "github-actions-templates",
+          "deployment-procedures",
+          "llm-app-patterns",
+          "rag-engineer"
+        ]
+      }
+    },
+    "stacks": {
+      "description": "Framework and ORM skills; with --repo, only those matching the repo's stack",
+      "sources": {
+        "sickn33/antigravity-awesome-skills": [
+          "nextjs-best-practices",
+          "react-best-practices",
+          "sveltekit",
+          "astro",
+          "angular",
+          "animejs-animation",
+          "nestjs-expert",
+          "fastapi-pro",
+          "hono",
+          "django-pro",
+          "laravel-expert",
+          "golang-pro",
+          "rust-pro",
+          "prisma-expert",
+          "drizzle-orm-expert",
+          "bullmq-specialist",
+          "inngest",
+          "trigger-dev",
+          "clerk-auth",
+          "nextjs-supabase-auth"
+        ]
+      },
+      "when": {
+        "nextjs-best-practices": [
+          "nextjs"
+        ],
+        "react-best-practices": [
+          "react"
+        ],
+        "sveltekit": [
+          "sveltekit"
+        ],
+        "astro": [
+          "astro"
+        ],
+        "angular": [
+          "angular"
+        ],
+        "animejs-animation": [
+          "animejs"
+        ],
+        "nestjs-expert": [
+          "nestjs"
+        ],
+        "fastapi-pro": [
+          "fastapi"
+        ],
+        "hono": [
+          "hono"
+        ],
+        "django-pro": [
+          "django"
+        ],
+        "laravel-expert": [
+          "php"
+        ],
+        "golang-pro": [
+          "go"
+        ],
+        "rust-pro": [
+          "rust"
+        ],
+        "prisma-expert": [
+          "prisma"
+        ],
+        "drizzle-orm-expert": [
+          "drizzle"
+        ],
+        "bullmq-specialist": [
+          "bullmq"
+        ],
+        "inngest": [
+          "inngest"
+        ],
+        "trigger-dev": [
+          "trigger-dev"
+        ],
+        "clerk-auth": [
+          "clerk"
+        ],
+        "nextjs-supabase-auth": [
+          "supabase"
+        ]
+      }
+    }
+  }
+}
