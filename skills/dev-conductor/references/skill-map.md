@@ -44,7 +44,7 @@ Read `frontend.md` first; it decides which row applies. Choose exactly ONE desig
 | Motion jank | `fixing-motion-performance` | none | Animate transform/opacity only |
 | Anti-slop gate (visuals) | `antislop-ui` | `antislop-human` (interactive), `antislop-layoutmobile` (responsive), `unslop` | `frontend.md` honesty rules |
 | Page copy (headlines, CTAs) | `antislop-copywriting` | `copywriting`, `ux-copy` | Real facts from the user only, no invented claims |
-| Charts, KPI tiles, dashboards | `dataviz` | `claude-d3js-skill`, `plotly` | One chart form per question, labeled axes, accessible colors |
+| Charts, KPI tiles, dashboards | `data-visualization` | `dataviz` (host built-in), `claude-d3js-skill`, `plotly` | One chart form per question, labeled axes, accessible colors |
 | Accessibility | `fixing-accessibility` | `ui-a11y`, `wcag-audit-patterns` | `frontend.md` baseline |
 | Framework | `nextjs-best-practices` / `react-best-practices` / `sveltekit` / `astro` / `angular` | match the repo | Repo conventions |
 | Visual verification | `webapp-testing` | `playwright-skill`, `claude-in-chrome`, `run` | Tell the user it was not checked visually |

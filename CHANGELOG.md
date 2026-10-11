@@ -13,6 +13,6 @@ First public release.
   plugins), `validate.py` (lints the skill).
 - Ten agent eval scenarios and script regression tests; CI on Linux, macOS, and Windows.
 - Installers for macOS/Linux and Windows; Claude Code plugin and marketplace manifests.
-- `install_companions.py` + `companions.json`: installs the 103 companion skills the skill map
+- `install_companions.py` + `companions.json`: installs the 104 companion skills the skill map
   routes to, in four packs, from their original repos via the `skills` CLI, skipping ones
   already installed and filtering stack skills to the repo's stack.

@@ -98,7 +98,7 @@ skill and source, `--dry-run` to print the commands. Skills you already have are
 | Pack | Skills | What |
 |---|---|---|
 | `core` | 29 | clarify, plan, debug, TDD, review, verify (Superpowers, Matt Pocock, and others) |
-| `frontend` | 30 | design direction, components, accessibility, motion, anti-slop, visual testing |
+| `frontend` | 31 | design direction, components, accessibility, motion, anti-slop, visual testing |
 | `backend` | 24 | API, services, databases, migrations, auth, payments, infra, LLM apps |
 | `stacks` | 20 | framework and ORM skills; with `--project`/`--repo`, only the ones your stack uses |
 
